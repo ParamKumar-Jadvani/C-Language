@@ -20,12 +20,8 @@ int main()
 			if(str[i] - str[j] == 0)
 				freq[i]++;
 		}
-	}
-	
-	for(i=0; i<strlen(str); i++)
-	{
 		printf("%c => %d \n",str[i],freq[i]);
-	}
+	} 
 	
 	return 0;
 }
