@@ -6,7 +6,7 @@ int main()
 {
 	int sub1, stu1, i, j, k;
 	
-	printf("\nEnter Total Number of Subject : ");
+	printf("Enter Total Number of Subject : ");
 	scanf("%d",&sub1);
 	
 	printf("\nEnter Total Number of Stuents : ");
@@ -16,6 +16,9 @@ int main()
 	char subject[sub1][10], student[stu1][20];
 	int sub_m[stu1][sub1]; 
 	
+	
+	system("cls");
+	
 	fflush(stdin);
 	for(i=0; i<sub1; i++)
 	{
@@ -23,16 +26,19 @@ int main()
 		gets(subject[i]);		
 	}
 	
+	system("cls");
+		
+	printf("\t---Fill Up Given Details---\n");
 	for(i=0; i<stu1; i++)
 	{
 		for(j=0; j<1; j++)
 		{
 			fflush(stdin);
 			
-			printf("Enter Student Name : ");
+			printf("\n\n Student Name : ");
 			gets(student[i]);
 			
-			printf("Enter Subject Marks\n");
+			printf("\n Subject Marks\n");
 			
 			fflush(stdin);
 			for(k=0; k<sub1; k++)
@@ -43,11 +49,15 @@ int main()
 		}
 	}
 	
+	
+	system("cls");
+	printf("\t---Student Details---\n");
+	
 	for(i=0; i<stu1; i++)
 	{
 		for(j=0; j<1; j++)
 		{
-			printf("\n%s\t\n",student[i]);
+			printf("\n %s\t\n",student[i]);
 			
 			for(k=0; k<sub1; k++)
 			{
