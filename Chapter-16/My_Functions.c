@@ -3,7 +3,6 @@
 #define S scanf
 int i, j;
 
-
 int getInt();
 int getSum();
 int getFact();
@@ -17,8 +16,9 @@ void array_2D_Input();
 void array_2D_Output();
 void array_2D_Diagonal();
 void array_2D_Anti_Diagonal();
+void array_2D_Border_Elements();
+void array_2D_Inner_Elements();
 void array_2D();
-
 
 int getInt()
 {
@@ -26,7 +26,6 @@ int getInt()
     S("%d", &n);
     return n;
 }
-
 
 int getSum(int num)
 {
@@ -36,7 +35,6 @@ int getSum(int num)
         return 1;
 }
 
-
 int getFact(int num)
 {
     if (num > 1)
@@ -44,7 +42,6 @@ int getFact(int num)
     else
         return 1;
 }
-
 
 void getFibonacci(int num)
 {
@@ -58,14 +55,12 @@ void getFibonacci(int num)
     }
 }
 
-
 int getArraySize()
 {
     P("Enter Array Length : ");
     int n = getInt();
     return n;
 }
-
 
 void arrayInput(int a[], int n)
 {
@@ -77,7 +72,6 @@ void arrayInput(int a[], int n)
     }
 }
 
-
 void arrayOutput(int a[], int n)
 {
     P("\t---Your Data---\n");
@@ -86,7 +80,6 @@ void arrayOutput(int a[], int n)
         P("a[%d] : %d\n", i, a[i]);
     }
 }
-
 
 void array()
 {
@@ -102,7 +95,6 @@ void array()
     arraySorting(a, n);
     arrayOutput(a, n);
 }
-
 
 void arraySorting(int a[], int n)
 {
@@ -120,10 +112,9 @@ void arraySorting(int a[], int n)
     }
 }
 
-
 void array_2D_Input(int r, int c, int a[r][c])
 {
-	P("\t---Enter Given Data---\n");
+    P("\t---Enter Given Data---\n");
     for (i = 0; i < r; i++)
     {
         for (j = 0; j < c; j++)
@@ -134,10 +125,9 @@ void array_2D_Input(int r, int c, int a[r][c])
     }
 }
 
-
 void array_2D_Output(int r, int c, int a[r][c])
 {
-	P("\t---Your Data---\n");
+    P("\t---Your Data---\n");
     for (i = 0; i < r; i++)
     {
         for (j = 0; j < c; j++)
@@ -148,46 +138,77 @@ void array_2D_Output(int r, int c, int a[r][c])
     }
 }
 
-
 void array_2D()
 {
-	int r = getArraySize();
+    int r = getArraySize();
     int c = getArraySize();
 
     int a[r][c];
 
-    array_2D_Input(r,c,a);
-    array_2D_Output(r,c,a);
+    array_2D_Input(r, c, a);
+    array_2D_Output(r, c, a);
 }
-
 
 void array_2D_Diagonal(int r, int c, int a[r][c])
 {
     P("\t---Diagonal Elements---\n");
-    for(i=0; i<r; i++)
+    for (i = 0; i < r; i++)
     {
-        for(j=0; j<c; j++)
+        for (j = 0; j < c; j++)
         {
-            if(i==j)
-                P("%d\t",a[i][j]);
+            if (i == j)
+                P("%d\t", a[i][j]);
             else
                 P("\t");
         }
+        P("\n");
     }
 }
 
-
-void array_2D_Diagonal(int r, int c, int a[r][c])
+void array_2D_Anti_Diagonal(int r, int c, int a[r][c])
 {
     P("\t---Anti_Diagonal Elements---\n");
-    for(i=0; i<r; i++)
+    for (i = 0; i < r; i++)
     {
-        for(j=0; j<c; j++)
+        for (j = 0; j < c; j++)
         {
-            if(i+j == r-1)
-                P("%d\t",a[i][j]);
+            if (i + j == r - 1)
+                P("%d\t", a[i][j]);
             else
                 P("\t");
         }
+        P("\n");
+    }
+}
+
+void array_2D_Border_Elements(int r, int c, int a[r][c])
+{
+    P("\t---Border_Elemenrs_2D_Array---\n");
+    for (i = 0; i < r; i++)
+    {
+        for (j = 0; j < c; j++)
+        {
+            if (i == 0 || j == 0 || i == r - 1 || j == c - 1)
+                P("%d\t", a[i][j]);
+            else
+                P("\t");
+        }
+        P("\n");
+    }
+}
+
+void array_2d_Inner_Elements(int r, int c, int a[r][c])
+{
+    P("\t---Inner_Elements_2D_Array\n");
+    for (i = 0; i < r; i++)
+    {
+        for (j = 0; j < c; j++)
+        {
+            if (i == 0 || j == 0 || i == r - 1 || j == c - 1)
+                P("\t");
+            else
+                P("%d\t", a[i][j]);
+        }
+        P("\n");
     }
 }
