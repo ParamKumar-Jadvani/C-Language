@@ -1,20 +1,20 @@
-#include<stdio.h>
+#include <stdio.h>
 
 int main()
 {
-	int s,e;
-	
+	int s, e;
+
 	printf("Emter the Any Year :");
-	scanf("%d",&s);
-	
+	scanf("%d", &s);
+
 	printf("Emter the Any Year :");
-	scanf("%d",&e);
-	
-	while(s <= e)
+	scanf("%d", &e);
+
+	while (s <= e)
 	{
-		if(s%4 == 0)
+		if (s % 4 == 0)
 		{
-			printf("%d ",s);
+			printf("%d ", s);
 		}
 		s++;
 	}

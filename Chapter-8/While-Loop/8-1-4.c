@@ -1,15 +1,17 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(){
+int main()
+{
 	int i;
-	
+
 	printf("Emter the Any number :");
-	scanf("%d",&i);
-	
-	while(i >= 1){
-		if(i%2 != 0)
+	scanf("%d", &i);
+
+	while (i >= 1)
+	{
+		if (i % 2 != 0)
 		{
-			printf("%d ",i);
+			printf("%d ", i);
 		}
 		i--;
 	}

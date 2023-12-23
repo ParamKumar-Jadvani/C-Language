@@ -1,21 +1,20 @@
-#include<stdio.h>
-#include<conio.h>
+#include <stdio.h>
+#include <conio.h>
 #define P printf
 #define S scanf
 
-
 int main()
 {
-	float p,r,t;
+	float p, r, t;
 	clrscr();
 	P("Enter the Value of Money : ");
-	S("%f",&p);
+	S("%f", &p);
 	P("Enter the Rate of Interst : ");
-	S("%f",&r);
+	S("%f", &r);
 	P("Enter the Time Of Taken Money : ");
-	S("%f",&t);
+	S("%f", &t);
 
-	P("Your Simple Interst is : %.2f",(p*r*t)/100);
+	P("Your Simple Interst is : %.2f", (p * r * t) / 100);
 	getch();
 	return 0;
 }

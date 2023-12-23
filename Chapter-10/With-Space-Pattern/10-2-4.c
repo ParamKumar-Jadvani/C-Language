@@ -1,21 +1,21 @@
-#include<stdio.h>
+#include <stdio.h>
 
 int main()
 {
-	int i,j,s;
-	
-	for(i=5; i>=1; i--)
+	int i, j, s;
+
+	for (i = 5; i >= 1; i--)
 	{
-		for(s=1; s<=5-i; s++)
+		for (s = 1; s <= 5 - i; s++)
 		{
 			printf("  ");
 		}
-		for(j=i; j>=1; j--)
+		for (j = i; j >= 1; j--)
 		{
-			printf("%d ",j%2);
+			printf("%d ", j % 2);
 		}
 		printf("\n");
 	}
-	
+
 	return 0;
 }

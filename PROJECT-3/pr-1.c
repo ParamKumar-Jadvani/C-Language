@@ -1,13 +1,13 @@
-#include<stdio.h>
+#include <stdio.h>
 
 int main()
 {
-	char i='a';
-	
+	char i = 'a';
+
 	do
 	{
-		printf("%c ",i);
+		printf("%c ", i);
 		i += 4;
-	} while(i <= 'z');	
+	} while (i <= 'z');
 	return 0;
 }

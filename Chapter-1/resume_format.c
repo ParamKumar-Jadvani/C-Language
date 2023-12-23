@@ -1,7 +1,8 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(){
-	
+int main()
+{
+
 	printf("\t\t  About\n");
 	printf("\t\t *--------------------------------\n");
 	printf("\t\t *Paramkumar Rajendrakumar Jadvani\n");
@@ -28,7 +29,6 @@ int main(){
 	printf("\t\t* Fullstack Developer Running\n");
 	printf("\t\t* C language Running\n");
 	printf("\t\t* ----------------------------\n");
-	
+
 	return 0;
-	
 }

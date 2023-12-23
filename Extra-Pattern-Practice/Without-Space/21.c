@@ -1,17 +1,17 @@
-#include<stdio.h>
+#include <stdio.h>
 
 int main()
 {
-	int i,j;
-	
-	for(i=1; i<=5; i++)
+	int i, j;
+
+	for (i = 1; i <= 5; i++)
 	{
-		for(j=i; j>=1; j--)
+		for (j = i; j >= 1; j--)
 		{
 			printf("* ");
 		}
 		printf("\n");
 	}
-	
+
 	return 0;
 }
