@@ -40,7 +40,7 @@ int main()
 
 	printf("\n\n");
 	for (i = 0; i < n; i++)
-		printf("Enter a[%d] : %d\n", i + 1, ***ptr2[i]);
+		printf("a[%d] : %d\n", i + 1, ***ptr2[i]);
 
 	printf("\n\n");
 
