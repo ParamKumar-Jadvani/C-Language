@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #define P printf
 #define S scanf
 int i, j;
@@ -7,10 +9,11 @@ int getInt();
 int getSum();
 int getFact();
 void getFibonacci();
-int getArraySize();
+int getArrayLength();
 void arrayInput();
 void arrayOutput();
 void arraySorting();
+int arrayAddition();
 void array();
 void array_2D_Input();
 void array_2D_Output();
@@ -19,6 +22,10 @@ void array_2D_Anti_Diagonal();
 void array_2D_Border_Elements();
 void array_2D_Inner_Elements();
 void array_2D();
+void pointerArrayInput();
+void pointerArrayOutput();
+void pointerArray();
+void arrayNameOutput();
 
 int getInt()
 {
@@ -55,11 +62,16 @@ void getFibonacci(int num)
     }
 }
 
-int getArraySize()
+int getArrayLength()
 {
     P("Enter Array Length : ");
     int n = getInt();
     return n;
+}
+
+void arrayNameOutput(char name[])
+{
+    P("\t---%s---\n", name);
 }
 
 void arrayInput(int a[], int n)
@@ -76,17 +88,24 @@ void arrayOutput(int a[], int n)
 {
     P("\t---Your Data---\n");
     for (i = 0; i < n; i++)
-    {
         P("a[%d] : %d\n", i, a[i]);
-    }
 }
 
 void array()
 {
-    int n = getArraySize();
+    int n = getArrayLength();
     int a[n];
 
+    char name[20];
+
+    fflush(stdin);
+    P("Enter Array Name : ");
+    gets(name);
+
     arrayInput(a, n);
+
+    arrayNameOutput(name);
+
     arrayOutput(a, n);
 
     getch();
@@ -110,6 +129,14 @@ void arraySorting(int a[], int n)
             }
         }
     }
+}
+
+int arrayAddition(int a[], int n)
+{
+    int sum = 0;
+    for (i = 0; i < n; i++)
+        sum += a[i];
+    return sum;
 }
 
 void array_2D_Input(int r, int c, int a[r][c])
@@ -140,8 +167,8 @@ void array_2D_Output(int r, int c, int a[r][c])
 
 void array_2D()
 {
-    int r = getArraySize();
-    int c = getArraySize();
+    int r = getArrayLength();
+    int c = getArrayLength();
 
     int a[r][c];
 
@@ -210,5 +237,54 @@ void array_2d_Inner_Elements(int r, int c, int a[r][c])
                 P("%d\t", a[i][j]);
         }
         P("\n");
+    }
+}
+
+/*void pointerArrayInput(int **n, int **ptr)
+{
+    for (i = 0; i < **n; i++)
+    {
+        P("Enter a[%d] : ", i);
+        *(*ptr + i) = getInt();
+    }
+}
+
+void pointerArrayOutput(int **n, int **ptr)
+{
+    for (i = 0; i < **n; i++)
+    {
+        P("a[%d]\t:%d\n", i, *(*ptr + i));
+    }
+}
+
+void pointerArray(int *n, int *ptr)
+{
+    pointerArrayInput(&n, &ptr);
+    pointerArrayOutput(&n, &ptr);
+}*/
+
+void pointerArray()
+{
+    int n = getArrayLength();
+    int a[n];
+
+    pointerArrayInput(&n, &a);
+    pointerArrayOutput(&n, &a);
+}
+
+void pointerArrayInput(int *n, int *ptr)
+{
+    for (i = 0; i < *n; i++)
+    {
+        P("Enter a[%d] : ", i);
+        *(ptr + i) = getInt();
+    }
+}
+
+void pointerArrayOutput(int *n, int *ptr)
+{
+    for (i = 0; i < *n; i++)
+    {
+        P("a[%d]\t:%d\n", i, *(ptr + i));
     }
 }
