@@ -1,0 +1,10 @@
+
+	--- Prouct Deatils ---
+Id	Name	Quantity	Price	Discount	TotalPrice
+-------	-------	--------------	-------	--------------	--------------
+
+101	pav	4		500	10.00 %		1800.00
+
+102	dhosa	45		100	20.00 %		3600.00
+
+Your Bill is : 5400.00 
